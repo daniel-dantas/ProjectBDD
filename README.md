@@ -1,16 +1,16 @@
 # Project BDD
 
-Structure of a Node project with Typescript, made available to the community.
+Criação de casos de teste simples para a cadeira de teste de software.
 
-### Install dependencies
+### Instalando de Dependencias
 
 yarn install
 
-### Start development server
+### Iniciando servidor de desenvolvimento
 
 yarn dev
 
-### Build project to production
+### Transpilação do TS para JS
 
 yarn build
 
