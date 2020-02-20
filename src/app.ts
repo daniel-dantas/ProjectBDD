@@ -2,8 +2,9 @@ import express, { Request, Response, Express, json } from 'express'
 import Mongoose from 'mongoose'
 import cors from 'cors'
 
-const app: Express = express()
-const PORT: number = 8000
+import routes from './routes'
+
+const app = express()
 
 Mongoose.connect('mongodb://localhost/projectbdd',{
   useNewUrlParser: true,
@@ -17,10 +18,6 @@ Mongoose.connect('mongodb://localhost/projectbdd',{
 app.use(cors())
 app.use(json())
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Welcome to my life typescript')
-})
+app.use('/api', routes)
 
-app.listen(PORT, () => {
-  console.log(`Server is open in port ${PORT}`)
-})
+export default app
